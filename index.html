@@ -1,0 +1,132 @@
+﻿<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Beautiful Cities</title>
+        <link rel="stylesheet" href="./assets/sass/css/index.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <link rel="icon" href="./assets/img/base/favicon.ico" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="container">
+                <nav class="header__nav">
+                    <a href="#" class="header__nav__logo">
+                        <img src="./assets/img/base/logo.png" alt="Cities logo" class="logo" />
+                    </a>
+                    <ul class="header__nav__list">
+                        <a href="#Piter" class="item">Piter</a>
+                        <a href="#San" class="item">San Francisco</a>
+                        <a href="#Beijing" class="item">Beijing</a>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="intro">
+                <div class="container">
+                    <div class="intro__content">
+                        <b class="intro__content__subtitle">Very beautiful cities around the world. Scroll down.</b>
+                        <h1 class="intro__content__title">Discover the world's most beautiful cities.</h1>
+                        <button class="intro__content__btn" type="button" data-scroll-target="#cities">Explore Now</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cities" id="cities">
+                <div class="container">
+                    <h2 class="featured-title">FEATURED DESTINATIONS</h2>
+                    <div class="cities__cards">
+                        <article class="card card--piter" id="Piter" data-city="piter" tabindex="0">
+                            <div class="card__image-holder">
+                                <div class="card__swiper swiper piter-swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="./assets/img/home/piter1.jpg" alt="Saint Petersburg view 1" /></div>
+                                        <div class="swiper-slide"><img src="./assets/img/home/piter2.jpg" alt="Saint Petersburg view 2" /></div>
+                                        <div class="swiper-slide"><img src="./assets/img/home/piter3.jpg" alt="Saint Petersburg view 3" /></div>
+                                        <div class="swiper-slide"><img src="./assets/img/home/piter4.jpg" alt="Saint Petersburg view 4" /></div>
+                                        <div class="swiper-slide"><img src="./assets/img/home/piter5.jpg" alt="Saint Petersburg view 5" /></div>
+                                        <div class="swiper-slide"><img src="./assets/img/home/piter6.jpg" alt="Saint Petersburg view 6" /></div>
+                                        <div class="swiper-slide"><img src="./assets/img/home/piter7.jpg" alt="Saint Petersburg view 7" /></div>
+                                        <div class="swiper-slide"><img src="./assets/img/home/piter8.jpg" alt="Saint Petersburg view 8" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <div class="card__info">
+                                <h3 class="card__info__title">PITER</h3>
+                                <p class="card__info__text">Canals, palaces, and drawbridges create a unique imperial atmosphere.</p>
+                                <button class="card__details-btn" type="button">Read Full Story</button>
+                            </div>
+                        </article>
+
+                        <article class="card card--beijing" id="Beijing" data-city="beijing" tabindex="0">
+                            <div class="card__image-holder">
+                                <div class="card__swiper swiper china-swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="./assets/img/home/china1.jpg" alt="Beijing view 1" /></div>
+                                        <div class="swiper-slide"><img src="./assets/img/home/china2.jpg" alt="Beijing view 2" /></div>
+                                        <div class="swiper-slide"><img src="./assets/img/home/china3.jpg" alt="Beijing view 3" /></div>
+                                        <div class="swiper-slide"><img src="./assets/img/home/china4.jpg" alt="Beijing view 4" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <div class="card__info">
+                                <h3 class="card__info__title">BEIJING</h3>
+                                <p class="card__info__text">Ancient dynasties and high-tech city life live side by side every day.</p>
+                                <button class="card__details-btn" type="button">Read Full Story</button>
+                            </div>
+                        </article>
+
+                        <article class="card card--san" id="San" data-city="san" tabindex="0">
+                            <div class="card__image-holder">
+                                <div class="card__swiper swiper san-swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="./assets/img/home/san1.jpg" alt="San Francisco view 1" /></div>
+                                        <div class="swiper-slide"><img src="./assets/img/home/san2.jpg" alt="San Francisco view 2" /></div>
+                                        <div class="swiper-slide"><img src="./assets/img/home/san3.jpg" alt="San Francisco view 3" /></div>
+                                        <div class="swiper-slide"><img src="./assets/img/home/san4.jpg" alt="San Francisco view 4" /></div>
+                                        <div class="swiper-slide"><img src="./assets/img/home/san5.jpg" alt="San Francisco view 5" /></div>
+                                        <div class="swiper-slide"><img src="./assets/img/home/san6.jpg" alt="San Francisco view 6" /></div>
+                                        <div class="swiper-slide"><img src="./assets/img/home/san7.jpg" alt="San Francisco view 7" /></div>
+                                        <div class="swiper-slide"><img src="./assets/img/home/san8.jpg" alt="San Francisco view 8" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <div class="card__info">
+                                <h3 class="card__info__title">SAN FRANCISCO</h3>
+                                <p class="card__info__text">Bridges, fog, and steep streets shape one of the most iconic skylines.</p>
+                                <button class="card__details-btn" type="button">Read Full Story</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div class="city-modal" aria-hidden="true">
+            <div class="city-modal__overlay" data-modal-close></div>
+            <div class="city-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="cityModalTitle">
+                <button class="city-modal__close" type="button" data-modal-close aria-label="Close dialog">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <p class="city-modal__subtitle">CITY INSIGHTS</p>
+                <h3 class="city-modal__title" id="cityModalTitle"></h3>
+                <div class="city-modal__tabs" role="tablist">
+                    <button class="city-modal__tab is-active" type="button" data-topic="infrastructure">Infrastructure</button>
+                    <button class="city-modal__tab" type="button" data-topic="history">History</button>
+                    <button class="city-modal__tab" type="button" data-topic="civilization">Civilization</button>
+                </div>
+                <ul class="city-modal__list" id="cityModalList"></ul>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+        <script src="./assets/js/index.js"></script>
+    </body>
+</html>

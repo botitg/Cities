@@ -1,0 +1,486 @@
+﻿.cities {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+    background-color: #51658d;
+    background-image:
+        radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0) 45%),
+        radial-gradient(circle at 80% 35%, rgba(156, 194, 255, 0.18) 0%, rgba(156, 194, 255, 0) 50%),
+        linear-gradient(145deg, rgba(117, 143, 192, 0.94), rgba(66, 89, 136, 0.97)),
+        linear-gradient(rgba(255, 255, 255, 0.11) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.11) 1px, transparent 1px);
+    background-size:
+        auto,
+        auto,
+        auto,
+        34px 34px,
+        34px 34px;
+    background-position: center;
+}
+
+.featured-title {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.88);
+    letter-spacing: 0.12em;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 110px;
+}
+
+.cities__cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 28px;
+}
+
+.cities .card {
+    --base-shift: 0px;
+    width: 360px;
+    min-height: 340px;
+    background: linear-gradient(180deg, #fff 0%, #f6f8ff 100%);
+    border-radius: 28px;
+    position: relative;
+    padding: 108px 28px 30px;
+    box-shadow:
+        0 24px 38px rgba(13, 29, 62, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(calc(var(--base-shift) + 28px)) scale(0.96);
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        opacity 0.45s ease,
+        filter 0.4s ease;
+}
+
+.cities .card:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.cities .card:nth-child(2) {
+    --base-shift: -12px;
+    width: 392px;
+    min-height: 376px;
+    padding-top: 124px;
+    transition-delay: 0.15s;
+}
+
+.cities .card:nth-child(3) {
+    transition-delay: 0.25s;
+}
+
+.cities .card.is-visible {
+    opacity: 1;
+    transform: translateY(var(--base-shift)) scale(1);
+}
+
+.cities .card:focus-visible {
+    outline: 3px solid rgba(255, 255, 255, 0.8);
+    outline-offset: 4px;
+}
+
+.cities__cards:hover .card {
+    filter: saturate(0.85);
+    transform: translateY(calc(var(--base-shift) + 10px)) scale(0.985);
+}
+
+.cities__cards:hover .card:hover,
+.cities .card:focus-within,
+.cities .card:focus-visible {
+    filter: saturate(1.03);
+    transform: translateY(calc(var(--base-shift) - 12px)) scale(1.02);
+    box-shadow:
+        0 32px 46px rgba(15, 33, 73, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.75);
+}
+
+.cities .card__image-holder {
+    width: 172px;
+    height: 172px;
+    background: $white;
+    border-radius: 50%;
+    padding: 7px;
+    position: absolute;
+    left: 50%;
+    top: -86px;
+    transform: translateX(-50%);
+    box-shadow: 0 18px 28px rgba(29, 45, 84, 0.22);
+    animation: floatingImage 5.6s ease-in-out infinite;
+}
+
+.cities .card:nth-child(2) .card__image-holder {
+    width: 206px;
+    height: 206px;
+    top: -103px;
+    animation-duration: 6.2s;
+}
+
+.cities .card__swiper {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.cities .card__swiper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.cities .card__swiper .swiper-pagination {
+    bottom: 9px !important;
+}
+
+.cities .card__swiper .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+    background: rgba(255, 255, 255, 0.78);
+    opacity: 0.75;
+    transition: all 0.3s ease;
+}
+
+.cities .card__swiper .swiper-pagination-bullet-active {
+    width: 18px;
+    border-radius: 8px;
+    opacity: 1;
+}
+
+.cities .card__info {
+    text-align: center;
+}
+
+.cities .card__info__title {
+    font-size: 25px;
+    line-height: 1.1;
+    letter-spacing: 0.06em;
+    color: #bc9b42;
+    margin-bottom: 14px;
+}
+
+.cities .card__info__text {
+    font-size: 16px;
+    line-height: 1.55;
+    color: #5e6780;
+    max-width: 296px;
+    min-height: 74px;
+    margin: 0 auto 18px;
+}
+
+.cities .card__details-btn {
+    border: 0;
+    border-radius: 999px;
+    padding: 11px 18px;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #f7f9ff;
+    background: linear-gradient(135deg, #2f5cbb, #4f79d6);
+    box-shadow: 0 10px 18px rgba(46, 92, 187, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.cities .card__details-btn:hover,
+.cities .card__details-btn:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 22px rgba(46, 92, 187, 0.42);
+    filter: brightness(1.05);
+}
+
+.city-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1200;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.city-modal.is-open {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.city-modal__overlay {
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(6px);
+    background: rgba(8, 14, 29, 0.62);
+}
+
+.city-modal__dialog {
+    position: relative;
+    width: min(760px, 100%);
+    max-height: min(86vh, 780px);
+    overflow: auto;
+    border-radius: 24px;
+    padding: 26px 28px 26px;
+    background: linear-gradient(180deg, #ffffff, #f2f6ff);
+    box-shadow: 0 30px 70px rgba(6, 14, 34, 0.48);
+    transform: translateY(24px) scale(0.96);
+    opacity: 0;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.city-modal.is-open .city-modal__dialog {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.city-modal__close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 0;
+    font-size: 18px;
+    color: #3a4d75;
+    background: rgba(80, 111, 173, 0.12);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.city-modal__close:hover,
+.city-modal__close:focus-visible {
+    background: rgba(80, 111, 173, 0.24);
+    transform: rotate(90deg);
+}
+
+.city-modal__subtitle {
+    margin-bottom: 8px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    color: #6e84b2;
+}
+
+.city-modal__title {
+    font-size: clamp(26px, 4vw, 36px);
+    color: #2b3d66;
+    margin-bottom: 20px;
+}
+
+.city-modal__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.city-modal__tab {
+    border: 0;
+    border-radius: 999px;
+    padding: 9px 15px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #5b6990;
+    background: #e6ecfb;
+    transition: all 0.28s ease;
+}
+
+.city-modal__tab:hover,
+.city-modal__tab:focus-visible {
+    background: #d8e3ff;
+    color: #334a78;
+}
+
+.city-modal__tab.is-active {
+    color: #fff;
+    background: linear-gradient(135deg, #2f5cbb, #5d80d3);
+    box-shadow: 0 10px 18px rgba(46, 92, 187, 0.32);
+}
+
+.city-modal__list {
+    display: grid;
+    gap: 10px;
+    color: #4a5778;
+    padding-left: 20px;
+}
+
+.city-modal__item {
+    line-height: 1.52;
+    font-size: 16px;
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+.city-modal__dialog,
+.city-modal__list,
+.city-modal__item {
+    user-select: text;
+}
+
+@keyframes floatingImage {
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-8px);
+    }
+}
+
+@media (max-width: 1399px) {
+    .cities .card {
+        width: 320px;
+    }
+
+    .cities .card:nth-child(2) {
+        width: 356px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .featured-title {
+        margin-bottom: 94px;
+    }
+
+    .cities__cards {
+        gap: 18px;
+    }
+
+    .cities .card {
+        width: 290px;
+        min-height: 320px;
+        padding: 96px 20px 24px;
+    }
+
+    .cities .card:nth-child(2) {
+        width: 330px;
+        min-height: 346px;
+        padding-top: 108px;
+    }
+
+    .cities .card__image-holder {
+        width: 156px;
+        height: 156px;
+        top: -78px;
+    }
+
+    .cities .card:nth-child(2) .card__image-holder {
+        width: 186px;
+        height: 186px;
+        top: -94px;
+    }
+
+    .cities .card__info__text {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    .cities {
+        padding: 95px 0;
+    }
+
+    .featured-title {
+        margin-bottom: 80px;
+    }
+
+    .cities__cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 90px;
+    }
+
+    .cities__cards:hover .card,
+    .cities__cards:hover .card:hover {
+        transform: translateY(0) scale(1);
+        filter: none;
+    }
+
+    .cities .card,
+    .cities .card:nth-child(2) {
+        --base-shift: 0px;
+        width: min(430px, 100%);
+        min-height: 330px;
+        padding: 98px 24px 26px;
+    }
+
+    .cities .card__image-holder,
+    .cities .card:nth-child(2) .card__image-holder {
+        width: 176px;
+        height: 176px;
+        top: -88px;
+    }
+
+    .city-modal {
+        padding: 14px;
+    }
+
+    .city-modal__dialog {
+        padding: 24px 20px 22px;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .cities {
+        padding: 80px 0;
+    }
+
+    .featured-title {
+        font-size: 14px;
+        margin-bottom: 72px;
+    }
+
+    .cities__cards {
+        gap: 74px;
+    }
+
+    .cities .card,
+    .cities .card:nth-child(2) {
+        min-height: 298px;
+        border-radius: 22px;
+        padding: 88px 16px 22px;
+    }
+
+    .cities .card__image-holder,
+    .cities .card:nth-child(2) .card__image-holder {
+        width: 148px;
+        height: 148px;
+        top: -74px;
+    }
+
+    .cities .card__info__title {
+        font-size: 22px;
+    }
+
+    .cities .card__details-btn {
+        width: 100%;
+    }
+
+    .city-modal__tab {
+        flex: 1 1 auto;
+    }
+
+    .city-modal__item {
+        font-size: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cities .card,
+    .cities .card__image-holder,
+    .city-modal,
+    .city-modal__dialog,
+    .cities .card__details-btn,
+    .city-modal__close,
+    .city-modal__tab {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+    }
+}
