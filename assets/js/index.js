@@ -3,55 +3,55 @@ document.addEventListener("DOMContentLoaded", () => {
         piter: {
             title: "Saint Petersburg",
             infrastructure: [
-                "The city is crossed by canals and granite embankments where locals gather and relax.",
-                "At night, famous drawbridges open for large ships crossing the Neva River.",
-                "Historic landmarks like the Singer House define the skyline with iconic details."
+                "Saint Petersburg is known as the \"City of Water\" because of its canals and granite embankments where people relax.",
+                "At night, drawbridges open to let ships pass along the Neva River.",
+                "The city also features grand historic buildings like the Singer House with its glass globe."
             ],
             history: [
-                "The Bronze Horseman monument represents Peter the Great and the city's long legacy.",
-                "The Winter Palace, now the Hermitage, was once home to Russian tsars.",
-                "St. Isaac's Cathedral reflects the wealth and artistic power of the Russian Empire."
+                "The Bronze Horseman statue represents the city's strength and long past.",
+                "The Winter Palace, once home to Russian tsars, is now a major museum.",
+                "Large cathedrals such as St. Isaac's reflect the wealth and artistry of the Russian Empire."
             ],
             civilization: [
-                "Palaces with golden interiors and grand staircases show imperial lifestyle and culture.",
-                "Visitors from around the world come for the city's unique European atmosphere.",
-                "Nighttime Saint Petersburg glows with lights and crowds watching bridge openings."
+                "Palaces display golden interiors and grand staircases that show royal luxury.",
+                "Visitors admire the city's European-style architecture.",
+                "At night, illuminated monuments and opening bridges create a magical atmosphere."
             ]
         },
         beijing: {
-            title: "Beijing and Modern China",
+            title: "Beijing",
             infrastructure: [
-                "China builds advanced mountain roads and bridges to connect difficult terrain.",
-                "Mega-cities like Chongqing use roads and rail lines passing through dense buildings.",
-                "The country operates the world's largest high-speed rail network."
+                "China builds mountain roads and bridges to connect cities in hard terrain.",
+                "Mega-cities like Chongqing use creative designs, with trains and roads passing through buildings.",
+                "China also has a huge high-speed train network that makes long travel fast and easy."
             ],
             history: [
-                "The Summer Palace in Beijing reflects imperial design and royal life.",
-                "The Great Wall remains a global symbol of ancient defense and engineering.",
-                "Modern architecture still uses colors and roof lines inspired by historical traditions."
+                "Historic places like the Summer Palace show how emperors lived long ago.",
+                "The Great Wall is a famous symbol of protection from the past.",
+                "Many modern buildings still use traditional red colors and classic roof shapes."
             ],
             civilization: [
-                "Ancient temples stand next to neon districts, showing old and new eras together.",
-                "Night markets and crowded streets reflect dynamic and hardworking city life.",
-                "Calligraphy, red decorative motifs, and ritual aesthetics shape the cultural identity."
+                "Chinese cities mix old temples with modern lights, showing past and present together.",
+                "Busy streets and night markets reflect active city life.",
+                "Traditional art, like calligraphy and red decorations, gives the culture a unique identity."
             ]
         },
         san: {
             title: "San Francisco",
             infrastructure: [
-                "Landmark bridges, including the Golden Gate and Bay Bridge, connect the bay region.",
-                "The city is known for its cable cars that handle steep hills and daily commuting.",
-                "A visible urban grid with major parks like Golden Gate Park defines the layout."
+                "San Francisco is famous for its huge bridges, like the Golden Gate and Bay Bridge, which connect the city over the water.",
+                "The city also has a unique cable car system that helps people travel on its steep hills.",
+                "From above, the city shows a clear grid layout with large parks like Golden Gate Park."
             ],
             history: [
-                "Victorian 'Painted Ladies' homes became an iconic symbol of 19th-century architecture.",
-                "Historic Market Street photos show over a century of commerce and movement.",
-                "Fisherman's Wharf and the Ferry Building grew as core waterfront trade locations."
+                "The colorful Victorian houses called the Painted Ladies represent the city's old building style.",
+                "Historic photos of Market Street show San Francisco has been a busy city for many years.",
+                "The waterfront areas, like Fisherman's Wharf and the Ferry Building, have long been important for trade and fishing."
             ],
             civilization: [
-                "Diverse neighborhoods create a blend of cultures and lifestyles.",
-                "The famous fog, often called 'Karl', shapes the mood and identity of the city.",
-                "Today, technology, arts, and historic buildings coexist in one fast-moving urban space."
+                "San Francisco is a mix of cultures where people live and work together.",
+                "The famous morning fog gives the city a special atmosphere.",
+                "Today, modern technology and art exist alongside historic buildings."
             ]
         }
     };

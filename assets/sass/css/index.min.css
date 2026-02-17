@@ -4,7 +4,9 @@
   padding: 0;
   outline: none;
   box-sizing: border-box;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 html,
@@ -341,7 +343,8 @@ li {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .cities .card__swiper .swiper-pagination {
@@ -531,7 +534,9 @@ li {
 .city-modal__dialog,
 .city-modal__list,
 .city-modal__item {
-  user-select: text;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+          user-select: text;
 }
 
 @keyframes floatingImage {
@@ -666,6 +671,4 @@ li {
     animation: none !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-/*# sourceMappingURL=index.min.css.map */
+}/*# sourceMappingURL=index.min.css.map */
